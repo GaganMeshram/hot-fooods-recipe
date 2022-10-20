@@ -31,7 +31,10 @@ const Searched = () => {
               <>
                 <div className="col-sm-6 col-md-4" key={item.id}>
                   <div className="card rounded m-3">
-                    <Link className="text-decoration-none shadow" to={"/recipe/" + item.id}>
+                    <Link
+                      className="text-decoration-none shadow"
+                      to={"/recipe/" + item.id}
+                    >
                       <img className="card-img-top" src={item.image} alt="" />
                       <div className="card-body bg-light">
                         <h4 className="card-title">{item.title}</h4>

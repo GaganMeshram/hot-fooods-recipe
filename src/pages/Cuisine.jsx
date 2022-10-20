@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 function Cuisine() {
-  const [cuisine, setCuisine] = useState([]);
+  const [cuisine, setCuisine] = useState([cuisine]);
   let params = useParams();
 
   const getCuisine = async (name) => {
@@ -12,16 +12,16 @@ function Cuisine() {
     );
     const data = await response.json();
     setCuisine(data.results);
-    console.log("still fetching cuisine data");
   };
 
   useEffect(() => {
     getCuisine(params.type);
-    console.log(params.type);
   }, [params.type]);
 
   return (
+  
     <div>
+      <div><h1>cuisin page</h1></div>
       <div className="container">
         <h1 className="display-3">Best Picks</h1>
       </div>

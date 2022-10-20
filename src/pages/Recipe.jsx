@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 function Recipe() {
   const [details, setDetails] = useState({});
   let params = useParams();
+  console.log(params);
 
   useEffect(() => {
     getDetails();
@@ -16,12 +17,11 @@ function Recipe() {
     );
     const itemdata = await data.json();
     setDetails(itemdata);
-    console.log("still fetching recipe details");
-    console.log(itemdata);
   };
 
   return (
     <>
+    <div><h1>Recipe page</h1></div>
       <div className="container bg-warning shadow my-5">
         <div className="row">
           <div className="col-sm p-3">
@@ -31,9 +31,7 @@ function Recipe() {
             <div className=" d-flex flex-column">
               <h2 className="text-capitalize">{details.title}</h2>
               <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
-              <div className="container-fluid">
-                
-              </div>
+              <div className="container-fluid"></div>
             </div>
           </div>
         </div>

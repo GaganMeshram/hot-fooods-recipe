@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Home from "../pages/Home";
 
 console.log(process.env);
 
 function Veg() {
   const [popular, setPopular] = useState([]);
-
-  
+  useEffect(() => {
+    getVeg();
+  }, [Home]);
 
   const getVeg = async () => {
     const veg = localStorage.getItem("popular");
 
     if (veg) {
       setPopular(JSON.parse(veg));
-      console.log("in popular local storage");
-      console.log(popular);
     } else {
       const response = await fetch(
         `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=6`
@@ -22,14 +22,8 @@ function Veg() {
       const data = await response.json();
       localStorage.setItem("popular", JSON.stringify(data.recipes));
       setPopular(data.recipes);
-      console.log(data.recipes);
-      console.log("still fetching data");
     }
-    
   };
-  useEffect(() => {
-    getVeg();
-  }, []);
 
   return (
     <>
@@ -42,21 +36,19 @@ function Veg() {
           {popular.map((recipe) => {
             return (
               <>
-              <Link className="col-sm-6 col-md-4 text-decoration-none" to={'/recipe/' + recipe.id}>
-                <div   key={recipe.id}>
-                  <div className="card m-3 shadow">
-                    <img
-                     
-                      className="card-img-top"
-                      src={recipe.image}
-                      alt=""
-                    />
-                    <div className="card-body bg-light">
-                      <h4 className="card-title">{recipe.title}</h4>
+                <Link
+                  className="col-sm-6 col-md-4 text-decoration-none"
+                  to={"/recipe/" + recipe.id}
+                >
+                  <div key={recipe.id}>
+                    <div className="card m-3 shadow">
+                      <img className="card-img-top" src={recipe.image} alt="" />
+                      <div className="card-body bg-light">
+                        <h4 className="card-title">{recipe.title}</h4>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
               </>
             );
           })}

@@ -13,9 +13,6 @@ function NonVeg() {
 
     if (check) {
       setNonveg(JSON.parse(check));
-
-      console.log("in nonveg local storage");
-      console.log(nonveg);
     } else {
       const response = await fetch(
         `https://api.spoonacular.com/food/search?apiKey=${process.env.REACT_APP_API_KEY}&query=chicken&number=2`
@@ -24,8 +21,6 @@ function NonVeg() {
       // console.log(data)
       localStorage.setItem("nonveg", JSON.stringify(data.searchResults));
       setNonveg(data.searchResults);
-      console.log(nonveg);
-      console.log("still fetching data");
     }
   };
 
