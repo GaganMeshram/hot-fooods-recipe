@@ -1,14 +1,23 @@
 import React from "react";
-import NonVeg from "../components/NonVeg";
-
-import Veg from "../components/Veg";
+import Hero from "../components/Hero/Hero";
+import Navbar from "../components/Navbar/Navbar";
+import Search from "../components/Search";
+import Footer from "../components/Footer/Footer";
+import "./Home.css";
+import CategoryCards from "../components/CategoryCards/CategoryCards";
 
 function Home() {
   return (
     <div>
-      <Veg />
-      <NonVeg />
+      <div>
+        <Navbar />
+        <Hero />
+      </div>
+      <Search />
+      <CategoryCards/>
+      <div><Footer/></div>
     </div>
+  
   );
 }
 

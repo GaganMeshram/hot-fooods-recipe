@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Home from "../pages/Home";
 
-console.log(process.env);
-
 function Veg() {
   const [popular, setPopular] = useState([]);
   useEffect(() => {

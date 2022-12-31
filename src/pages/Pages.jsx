@@ -1,18 +1,12 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Cuisine from "./Cuisine";
-import Home from "./Home";
-import Searched from "./Searched";
-import Recipe from "./Recipe";
-function pages() {
+import React from 'react'
+import Home from './Home'
+
+function Pages() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/Cuisine/:type" element={<Cuisine />} />
-      <Route path="/Searched/:search" element={<Searched />} />
-      <Route path="/Recipe/:name" element={<Recipe />} />
-    </Routes>
-  );
+    <div>
+      <Home/>
+    </div>
+  )
 }
 
-export default pages;
+export default Pages
