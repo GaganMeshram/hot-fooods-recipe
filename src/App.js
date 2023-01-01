@@ -23,7 +23,6 @@ function App() {
         <Route path="/american" element={<American />} />
         <Route path="/italian" element={<Italian />} />
         <Route path="/indian" element={<Indian />} />
-
         <Route path="/Cuisine/:type" element={<Italian />} />
         <Route path="/Searched/:search" element={<Searched />} />
         <Route path="/Recipe/:name" element={<Recipe />} />
