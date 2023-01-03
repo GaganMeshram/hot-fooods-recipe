@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 
 const Searched = () => {
   const [searchedItem, setSearchedItem] = useState([]);
+  const [noResult, setNoResult] = useState(false);
   let params = useParams();
 
   const getSearched = async (name) => {
@@ -11,17 +12,32 @@ const Searched = () => {
       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}`
     );
     const data = await response.json();
-    setSearchedItem(data.results);
+    console.log(data);
+    if (data.results == "") {
+      setNoResult(true);
+    } else setSearchedItem(data.results);
   };
 
   useEffect(() => {
     getSearched(params.search);
   }, [params.search]);
 
+  if (noResult) {
+    return (
+      <div className="container mt-5 p-5 border bg-light">
+        <h3 className="display-3">Sorry...</h3>
+        <p>
+          No Results Found For{" "}
+          <span className="text-warning">{params.search}</span>
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className="container">
-        <h1 className="display-3">Best Picks</h1>
+        <h1 className="display-3">Best Picks For {params.search}</h1>
       </div>
 
       <div className="container mt-3 ">

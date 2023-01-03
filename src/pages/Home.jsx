@@ -14,10 +14,11 @@ function Home() {
         <Hero />
       </div>
       <Search />
-      <CategoryCards/>
-      <div><Footer/></div>
+      <CategoryCards />
+      <div>
+        <Footer />
+      </div>
     </div>
-  
   );
 }
 

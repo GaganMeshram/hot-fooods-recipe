@@ -15,7 +15,7 @@ const Search = () => {
     <>
       <div className="row bg-light p-1 text-center">
         <div className="col-md-12">
-          <h1 className="text-info">Serch Food Here</h1>
+          <h1 className="text-info">Search Food Here</h1>
         </div>
         <div className="col-md-12 text-center p-3">
           <form onSubmit={submitHandler} action="">

@@ -13,7 +13,11 @@ function Footer() {
 
           <p>
             <em>
-              By <a href="">Gagan Meshram</a> <FaHeart color="pink"></FaHeart>
+              By
+              <a href="mailto:gmeshram774@gmail.com?subject=Regarding%20Job%20Opportunity%20&body=Hi%20Gagan%2C%0A%0A%0AThanks%2C%0AYour%20Name">
+                Gagan Meshram
+              </a>{" "}
+              <FaHeart color="pink"></FaHeart>
             </em>
           </p>
         </div>
