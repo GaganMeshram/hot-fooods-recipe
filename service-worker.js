@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/hot-foods-recipe/precache-manifest.e3de4f7e3076c8d629ef2395d4108308.js"
+  "/hot-foods-recipe/precache-manifest.67584a802306f9b6091e85db64e65d0e.js"
 );
 
 workbox.clientsClaim();
