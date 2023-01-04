@@ -1,8 +1,6 @@
 import React from "react";
-
 import Recipe from "./pages/Recipe";
 import Searched from "./pages/Searched";
-import Pages from "./pages/Pages";
 import { Route, Routes } from "react-router-dom";
 
 /* Pages */

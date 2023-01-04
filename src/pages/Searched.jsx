@@ -13,7 +13,7 @@ const Searched = () => {
     );
     const data = await response.json();
     console.log(data);
-    if (data.results == "") {
+    if (data.results === "") {
       setNoResult(true);
     } else setSearchedItem(data.results);
   };

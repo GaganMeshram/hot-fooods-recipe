@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { BiArrowBack } from "react-icons/bi";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer/Footer";
 
