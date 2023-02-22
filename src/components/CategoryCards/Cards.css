@@ -14,7 +14,7 @@
 
 .ind-img {
   background: url(../../assets/food-images/indian.jpg);
-  height: 300px;
+  height: 200px;
   width: 100%;
   background-size: cover; /* <------ */
   background-position: center;
@@ -26,9 +26,5 @@
   width: 100%;
   background-size: cover; /* <------ */
   background-position: center;
-}
-
-#card{
-  height: 450px;
 }
 

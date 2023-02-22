@@ -54,9 +54,9 @@ function Chinese() {
 
   return (
     <div>
-      <div className="container">
+      <div className="container bg-light">
         <h1 className="display-1 text-center">
-          <em>Best Picks For Chinese</em>
+          <em>Best Chinese Picks</em>
         </h1>
         <Link className="btn btn-dark" to="/">
           <BiArrowBack className="mx-2"></BiArrowBack>Back
@@ -71,7 +71,7 @@ function Chinese() {
               /* Card */
               <div className="col-sm-4 col-md-3 col-lg-4 mt-5">
                 <div className="card">
-                  <img src={item.strMealThumb} className="card-img-top" alt="..." />
+                  <img src={item.strMealThumb} class="card-img-top" alt="..." />
 
                   <div className="card-body">
                     <h5 className="card-title text-primary">{item.strMeal}</h5>

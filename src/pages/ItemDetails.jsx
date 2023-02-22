@@ -1,5 +1,4 @@
 import axios from "axios";
-import "../styles/details.css";
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -45,34 +44,36 @@ function ItemDetails() {
   }
 
   return (
-    <div className="container-fluid main-div">
-      <div className="text-center">
+    <div className="container-fluid">
+      <div className="bg-light text-center">
         <h1 className="display-1">{data.strMeal}</h1>
       </div>
-      <div className="container rounded-4 shadow-lg bg-light my-5">
-      <div className="row">
+
+      <div className="container bg-warning rounded-4 shadow bg-light my-5">
+        <div className="row">
           {/* col 1 */}
-          <div className="col-md-12 col-lg-6 my-auto">
+          <div className="col-md-12 col-lg-5 my-auto">
             <img
-              className="img-fluid rounded"
+              className="img-fluid w-100 rounded"
               src={data.strMealThumb}
               alt={data.strMeal}
             />
           </div>
-          
 
-           {/* col 2 */}
-           <div className="col-md-12 col-lg-5 mx-auto">
+          {/* col 2 */}
+          <div className="col-md-12 col-lg-5 mx-auto">
             <div className="row">
               <div className="col-lg-12">
                 <h2 className="text-capitalize display-4 text-dark text-center">
-                  Recipe
+                  {data.strMeal}
                 </h2>
 
                 <div className="col-lg-12 mt-5">
-                  {/* <h4 className="text-start display-6">Recipe</h4> */}
+                  <h4 className="text-start">Recipe</h4>
                   <p className="text-start">{data.strInstructions}</p>
                 </div>
+
+                <div className="container-fluid"></div>
               </div>
             </div>
           </div>
