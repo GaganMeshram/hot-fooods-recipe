@@ -8,14 +8,14 @@ const Search = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    navigate("/searched/" + input);
+    navigate("/searched/" +  input);
   };
 
   return (
     <>
       <div className="bg-light text-center container-fluid p-4">
         <div className="col-md-12">
-          <h1 className="text-dark border-1 display-3">Search Food Here</h1>
+          <h1 className="text-dark border-1 display-3">Search Foods Here</h1>
         </div>
         <div className="col-md-12 text-center">
           <form onSubmit={submitHandler} action="">
